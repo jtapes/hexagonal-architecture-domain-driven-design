@@ -1,10 +1,6 @@
 const cards = [];
 const products = [
   {
-    ids: "1",
-    title: "mars",
-  },
-  {
     id: "1",
     title: "mars",
     price: 60,

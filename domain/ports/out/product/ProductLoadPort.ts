@@ -2,5 +2,5 @@ import { ProductListingEntities } from "../../../entities/product/productListing
 import { LoadProductCommand } from "../../../commands/product/LoadProductCommand";
 
 export interface ProductLoadPort {
-  load(command: LoadProductCommand): ProductListingEntities;
+  load(command: LoadProductCommand): ProductListingEntities | null;
 }
