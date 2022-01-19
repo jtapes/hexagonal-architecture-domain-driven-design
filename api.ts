@@ -1,6 +1,9 @@
-import { ProductEntities } from "./domain/entities/product/productEntities";
 const cards = [];
 const products = [
+  {
+    ids: "1",
+    title: "mars",
+  },
   {
     id: "1",
     title: "mars",
@@ -18,7 +21,14 @@ const products = [
   },
 ];
 const api = {
-  products: products as any,
-  cards: cards as any,
+  products,
+  cards,
 };
-global.api = api;
+
+declare module NodeJS {
+  interface Process {
+    api;
+  }
+}
+
+process.api = api;

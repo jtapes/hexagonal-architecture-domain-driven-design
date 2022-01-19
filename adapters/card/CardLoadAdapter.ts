@@ -3,7 +3,7 @@ import { cardMapper } from "../../mappers/CardMapper";
 
 export class CardLoadAdapter implements CardLoadPort {
   load() {
-    const responseJson = global.api.cards;
+    const responseJson = process.api.cards;
     return cardMapper(responseJson);
   }
 }
