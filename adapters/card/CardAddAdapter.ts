@@ -1,5 +1,7 @@
 import { ProductId } from "../../domain/entities/product/productEntities";
 import { CardAddPort } from "../../domain/ports/out/card/CardAddPort";
+import { right, left } from "@sweet-monads/either";
+import { ErrorEntities } from "../../domain/entities/errorEntities";
 
 export class CardAddAdapter implements CardAddPort {
   add(ids: ProductId[]) {
@@ -16,7 +18,9 @@ export class CardAddAdapter implements CardAddPort {
       products.map((product) => {
         process.api.cards.push(product);
       });
+      return right({ success: true });
+    } else {
+      return left(new ErrorEntities("id valid"));
     }
-    return { success: !!products.length };
   }
 }
