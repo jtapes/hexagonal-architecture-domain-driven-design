@@ -1,10 +1,10 @@
 import { ProductListingEntities } from "../../../entities/product/productListingEntities";
 import { LoadProductCommand } from "../../../commands/product/LoadProductCommand";
-import { ProductLoadPort } from "../../out/product/ProductLoadPort";
+import { Either } from "@sweet-monads/either";
+import { ErrorEntities } from "../../../entities/errorEntities";
 
-// export interface ProductLoadQuery {
-//   load(command: LoadProductCommand): ProductListingEntities;
-// }
-
-// if the request matches the port
-export interface ProductLoadQuery extends ProductLoadPort {}
+export interface ProductLoadQuery {
+  load(
+    command: LoadProductCommand
+  ): Either<ErrorEntities, ProductListingEntities>;
+}

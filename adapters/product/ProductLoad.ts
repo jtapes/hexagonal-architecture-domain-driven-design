@@ -4,16 +4,24 @@ import { productsMapper } from "../../mappers/ProductMapper";
 import { ProductsResponseSchema } from "../../schema/productsSchema";
 import { right, left } from "@sweet-monads/either";
 import { ErrorEntities } from "../../domain/entities/errorEntities";
+import { AxiosType } from "../../types/AxiosType";
 
 export class ProductLoadAdapter implements ProductLoadPort {
-  load(command: LoadProductCommand) {
+  api(command: LoadProductCommand): AxiosType {
     const responseJson = process.api.products.filter((product) => {
       return command.ids.includes(product.id);
     });
-    const valid = ProductsResponseSchema.safeParse(responseJson);
-    console.log(11, valid.success);
+    return {
+      data: responseJson,
+      code: 200,
+    };
+  }
+
+  load(command: LoadProductCommand) {
+    const response = this.api(command);
+    const valid = ProductsResponseSchema.safeParse(response.data);
     return valid.success
-      ? right(productsMapper(responseJson))
+      ? right(productsMapper(valid.data))
       : left(new ErrorEntities("productLoad", valid.error));
   }
 }

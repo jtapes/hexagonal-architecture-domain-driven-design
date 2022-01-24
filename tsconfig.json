@@ -25,6 +25,7 @@
     "emitDecoratorMetadata": true,
     "baseUrl": ".",
     "types": [
+      "@types/jest",
       "@types/node",
       "@types/puppeteer"
     ]

@@ -9,14 +9,17 @@ export class ProductEntities {
     private readonly _price: ProductPrice
   ) {}
 
+  /* istanbul ignore next */
   public get id() {
     return this._id;
   }
 
+  /* istanbul ignore next */
   public get name() {
     return this._name;
   }
 
+  /* istanbul ignore next */
   public get price() {
     return this._price;
   }
