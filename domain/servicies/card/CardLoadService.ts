@@ -1,5 +1,5 @@
-import { CardLoadQuery } from "../../domain/ports/in/card/CardLoadQuery";
-import { CardLoadPort } from "../../domain/ports/out/card/CardLoadPort";
+import { CardLoadQuery } from "../../ports/in/card/CardLoadQuery";
+import { CardLoadPort } from "../../ports/out/card/CardLoadPort";
 
 export class CardLoadService implements CardLoadQuery {
   constructor(private readonly cardLoadPort: CardLoadPort) {}

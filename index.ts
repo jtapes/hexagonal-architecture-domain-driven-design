@@ -4,10 +4,10 @@ import { CardAddAdapter } from "./adapters/card/CardAddAdapter";
 import { LoadProductCommand } from "./domain/commands/product/LoadProductCommand";
 import { CardLoadAdapter } from "./adapters/card/CardLoadAdapter";
 import { CardDeleteAdapter } from "./adapters/card/CardDeleteAdapter";
-import { ProductLoadService } from "./servicies/product/ProductLoadService";
-import { CardLoadService } from "./servicies/card/CardLoadService";
-import { CardAddService } from "./servicies/card/CardAddService";
-import { CardDeleteService } from "./servicies/card/CardDeleteService";
+import { ProductLoadService } from "./domain/servicies/product/ProductLoadService";
+import { CardLoadService } from "./domain/servicies/card/CardLoadService";
+import { CardAddService } from "./domain/servicies/card/CardAddService";
+import { CardDeleteService } from "./domain/servicies/card/CardDeleteService";
 import { CardListingEntities } from "./domain/entities/card/CardListingEntities";
 
 const productLoadAdapter = new ProductLoadAdapter();
