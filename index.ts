@@ -1,28 +1,20 @@
 import "./api";
-import { ProductLoadAdapter } from "./adapters/product/ProductLoad";
-import { CartAddAdapter } from "./adapters/card/CartAddAdapter";
 import { ProductLoadCommand } from "./domain/product/ProductLoadCommand";
-import { CartLoadAdapter } from "./adapters/card/CartLoadAdapter";
-import { CartDeleteAdapter } from "./adapters/card/CartDeleteAdapter";
-import { ProductLoadService } from "./domain/product/ProductLoadService";
-import { CartLoadService } from "./domain/cart/servicies/CartLoadService";
-import { CartAddService } from "./domain/cart/servicies/CartAddService";
-import { CartDeleteService } from "./domain/cart/servicies/CartDeleteService";
+import { ProductLoadService } from "./servicies/product/ProductLoadService";
+import { CartLoadService } from "./servicies/cart/CartLoadService";
+import { CartAddService } from "./servicies/cart/CartAddService";
+import { CartDeleteService } from "./servicies/cart/CartDeleteService";
 import { CartListingEnitity } from "./domain/cart/entities/CartListingEnitity";
 
-const productLoadAdapter = new ProductLoadAdapter();
-const productService = new ProductLoadService(productLoadAdapter);
+const productLoadService = new ProductLoadService();
 
-const cardAddAdapter = new CartAddAdapter();
-const cardAddService = new CartAddService(cardAddAdapter);
-const cardDeleteAdapter = new CartDeleteAdapter();
-const cardDeleteService = new CartDeleteService(cardDeleteAdapter);
+const cardAddService = new CartAddService();
+const cardDeleteService = new CartDeleteService();
 
-const cardLoadAdapter = new CartLoadAdapter();
-const cardLoadService = new CartLoadService(cardLoadAdapter);
+const cardLoadService = new CartLoadService();
 
 const command = new ProductLoadCommand(["2", "3"], "ru", "novosibirsk");
-const productsListing = productService.load(command);
+const productsListing = productLoadService.load(command);
 console.log(productsListing.value);
 
 // cards
