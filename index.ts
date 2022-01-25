@@ -1,27 +1,27 @@
 import "./api";
 import { ProductLoadAdapter } from "./adapters/product/ProductLoad";
-import { CardAddAdapter } from "./adapters/card/CardAddAdapter";
-import { LoadProductCommand } from "./domain/commands/product/LoadProductCommand";
-import { CardLoadAdapter } from "./adapters/card/CardLoadAdapter";
-import { CardDeleteAdapter } from "./adapters/card/CardDeleteAdapter";
-import { ProductLoadService } from "./domain/servicies/product/ProductLoadService";
-import { CardLoadService } from "./domain/servicies/card/CardLoadService";
-import { CardAddService } from "./domain/servicies/card/CardAddService";
-import { CardDeleteService } from "./domain/servicies/card/CardDeleteService";
-import { CardListingEntities } from "./domain/entities/card/CardListingEntities";
+import { CartAddAdapter } from "./adapters/card/CartAddAdapter";
+import { ProductLoadCommand } from "./domain/product/ProductLoadCommand";
+import { CartLoadAdapter } from "./adapters/card/CartLoadAdapter";
+import { CartDeleteAdapter } from "./adapters/card/CartDeleteAdapter";
+import { ProductLoadService } from "./domain/product/ProductLoadService";
+import { CartLoadService } from "./domain/cart/servicies/CartLoadService";
+import { CartAddService } from "./domain/cart/servicies/CartAddService";
+import { CartDeleteService } from "./domain/cart/servicies/CartDeleteService";
+import { CartListingEnitity } from "./domain/cart/entities/CartListingEnitity";
 
 const productLoadAdapter = new ProductLoadAdapter();
 const productService = new ProductLoadService(productLoadAdapter);
 
-const cardAddAdapter = new CardAddAdapter();
-const cardAddService = new CardAddService(cardAddAdapter);
-const cardDeleteAdapter = new CardDeleteAdapter();
-const cardDeleteService = new CardDeleteService(cardDeleteAdapter);
+const cardAddAdapter = new CartAddAdapter();
+const cardAddService = new CartAddService(cardAddAdapter);
+const cardDeleteAdapter = new CartDeleteAdapter();
+const cardDeleteService = new CartDeleteService(cardDeleteAdapter);
 
-const cardLoadAdapter = new CardLoadAdapter();
-const cardLoadService = new CardLoadService(cardLoadAdapter);
+const cardLoadAdapter = new CartLoadAdapter();
+const cardLoadService = new CartLoadService(cardLoadAdapter);
 
-const command = new LoadProductCommand(["2", "3"], "ru", "novosibirsk");
+const command = new ProductLoadCommand(["2", "3"], "ru", "novosibirsk");
 const productsListing = productService.load(command);
 console.log(productsListing.value);
 
@@ -33,7 +33,7 @@ console.log(cards);
 console.log("add", cardAddService.add(["1", "2"]));
 cards = cardLoadService.load();
 console.log(cards.value);
-if (cards.value instanceof CardListingEntities) {
+if (cards.value instanceof CartListingEnitity) {
   console.log(cards.value.totalProductsPrice);
   console.log(cards.value.namesCardsLog);
 }

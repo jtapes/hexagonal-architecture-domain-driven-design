@@ -1,13 +1,13 @@
-import { ProductEntities } from "../domain/entities/product/productEntities";
-import { ProductListingEntities } from "../domain/entities/product/productListingEntities";
-import { ProductsResponseSchemaType } from "../schema/productsSchema";
+import { ProductEnitity } from "../domain/product/ProductEnitity";
+import { ProductListingEnitity } from "../domain/product/ProductListingEnitity";
+import { ProductsResponseSchemaType } from "../schema/ProductsSchema";
 
 export function productsMapper(
   response: ProductsResponseSchemaType
-): ProductListingEntities {
-  return new ProductListingEntities(
+): ProductListingEnitity {
+  return new ProductListingEnitity(
     response.map(
-      (product) => new ProductEntities(product.id, product.title, product.price)
+      (product) => new ProductEnitity(product.id, product.title, product.price)
     )
   );
 }
