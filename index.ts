@@ -13,8 +13,7 @@ const cardDeleteService = new CartDeleteService();
 
 const cardLoadService = new CartLoadService();
 
-const command = new ProductLoadCommand(["2", "3"], "ru", "novosibirsk");
-const productsListing = productLoadService.load(command);
+const productsListing = productLoadService.load(["2", "3"]);
 console.log(productsListing.value);
 
 // cards
