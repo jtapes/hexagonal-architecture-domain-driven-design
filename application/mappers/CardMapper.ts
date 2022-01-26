@@ -1,13 +1,13 @@
-import { CartListEnitity } from "../../domain/cart/entities/CartListEnitity";
-import { CartEnitity } from "../../domain/cart/entities/CartEnitity";
+import { CartListEntity } from "../../domain/cart/entities/CartListEntity";
+import { CartEntity } from "../../domain/cart/entities/CartEntity";
 import { ProductsResponseSchemaType } from "../schema/ProductsSchema";
 
 export function cardMapper(
   response: ProductsResponseSchemaType
-): CartListEnitity {
-  return new CartListEnitity(
+): CartListEntity {
+  return new CartListEntity(
     response.map(
-      (product) => new CartEnitity(product.id, product.title, product.price)
+      (product) => new CartEntity(product.id, product.title, product.price)
     )
   );
 }

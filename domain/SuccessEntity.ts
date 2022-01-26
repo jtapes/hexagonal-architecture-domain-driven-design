@@ -1,4 +1,4 @@
-export class SuccessEntities {
+export class SuccessEntity {
   constructor(
     private readonly _success: boolean,
     private readonly _message?: string

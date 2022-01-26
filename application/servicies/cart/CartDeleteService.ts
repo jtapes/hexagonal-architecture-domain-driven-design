@@ -1,4 +1,4 @@
-import { ProductId } from "../../../domain/product/ProductEnitity";
+import { ProductId } from "../../../domain/product/ProductEntity";
 import { CartDeleteUseCase } from "../../../domain/cart/ports/sec/CartDeleteUseCase";
 import { CartDeleteAdapter } from "../../adapters/card/CartDeleteAdapter";
 

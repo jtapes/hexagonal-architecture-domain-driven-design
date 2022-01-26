@@ -1,9 +1,9 @@
-import { ProductId } from "../../../domain/product/ProductEnitity";
+import { ProductId } from "../../../domain/product/ProductEntity";
 import { CartAddPort } from "../../../domain/cart/ports/pr/CartAddPort";
 import { right, left } from "@sweet-monads/either";
-import { ErrorEntities } from "../../../domain/ErrorEntities";
+import { ErrorEntity } from "../../../domain/ErrorEntity";
 import { AxiosType } from "../../../types/AxiosType";
-import { SuccessEntities } from "../../../domain/SuccessEntities";
+import { SuccessEntity } from "../../../domain/SuccessEntity";
 import { SuccessResponseSchema } from "../../schema/SuccessSchema";
 
 export class CartAddAdapter implements CartAddPort {
@@ -37,9 +37,9 @@ export class CartAddAdapter implements CartAddPort {
     const valid = SuccessResponseSchema.safeParse(response.data);
 
     if (valid.success) {
-      return right(new SuccessEntities(true));
+      return right(new SuccessEntity(true));
     } else {
-      return left(new ErrorEntities("id valid"));
+      return left(new ErrorEntity("id valid"));
     }
   }
 }

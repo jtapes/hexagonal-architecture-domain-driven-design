@@ -1,6 +1,6 @@
 import { Either } from "@sweet-monads/either";
-import { ErrorEntities } from "../../../ErrorEntities";
-import { CartListEnitity } from "../../entities/CartListEnitity";
+import { ErrorEntity } from "../../../ErrorEntity";
+import { CartListEntity } from "../../entities/CartListEntity";
 export interface CartLoadQuery {
-  load(): Either<ErrorEntities, CartListEnitity>;
+  load(): Either<ErrorEntity, CartListEntity>;
 }

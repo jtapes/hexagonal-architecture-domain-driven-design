@@ -4,7 +4,7 @@ import { ProductLoadService } from "./application/servicies/product/ProductLoadS
 import { CartLoadService } from "./application/servicies/cart/CartLoadService";
 import { CartAddService } from "./application/servicies/cart/CartAddService";
 import { CartDeleteService } from "./application/servicies/cart/CartDeleteService";
-import { CartListEnitity } from "./domain/cart/entities/CartListEnitity";
+import { CartListEntity } from "./domain/cart/entities/CartListEntity";
 
 const productLoadService = new ProductLoadService();
 
@@ -25,7 +25,7 @@ console.log(cards);
 console.log("add", cardAddService.add(["1", "2"]));
 cards = cardLoadService.load();
 console.log(cards.value);
-if (cards.value instanceof CartListEnitity) {
+if (cards.value instanceof CartListEntity) {
   console.log(cards.value.totalProductsPrice);
   console.log(cards.value.namesCardsLog);
 }

@@ -1,7 +1,7 @@
-import { ProductId } from "../../../product/ProductEnitity";
+import { ProductId } from "../../../product/ProductEntity";
 import { Either } from "@sweet-monads/either";
-import { ErrorEntities } from "../../../ErrorEntities";
-import { SuccessEntities } from "../../../SuccessEntities";
+import { ErrorEntity } from "../../../ErrorEntity";
+import { SuccessEntity } from "../../../SuccessEntity";
 export interface CartAddUseCase {
-  add(ids: ProductId[]): Either<ErrorEntities, SuccessEntities>;
+  add(ids: ProductId[]): Either<ErrorEntity, SuccessEntity>;
 }

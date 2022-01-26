@@ -3,7 +3,7 @@ import { ProductLoadCommand } from "../../../domain/product/ProductLoadCommand";
 import { productsMapper } from "../../mappers/ProductMapper";
 import { ProductsResponseSchema } from "../../schema/ProductsSchema";
 import { right, left } from "@sweet-monads/either";
-import { ErrorEntities } from "../../../domain/ErrorEntities";
+import { ErrorEntity } from "../../../domain/ErrorEntity";
 import { AxiosType } from "../../../types/AxiosType";
 
 export class ProductLoadAdapter implements ProductLoadPort {
@@ -12,7 +12,7 @@ export class ProductLoadAdapter implements ProductLoadPort {
       return command.ids.includes(product.id);
     });
     return {
-      data: responseJson,
+      data: responseJson as unknown,
       code: 200,
     };
   }
@@ -22,6 +22,6 @@ export class ProductLoadAdapter implements ProductLoadPort {
     const valid = ProductsResponseSchema.safeParse(response.data);
     return valid.success
       ? right(productsMapper(valid.data))
-      : left(new ErrorEntities("productLoad", valid.error));
+      : left(new ErrorEntity("productLoad", valid.error));
   }
 }

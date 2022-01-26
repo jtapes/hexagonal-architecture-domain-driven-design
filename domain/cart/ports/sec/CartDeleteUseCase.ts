@@ -1,7 +1,7 @@
-import { ProductId } from "../../../product/ProductEnitity";
+import { ProductId } from "../../../product/ProductEntity";
 import { Either } from "@sweet-monads/either";
-import { ErrorEntities } from "../../../ErrorEntities";
-import { SuccessEntities } from "../../../SuccessEntities";
+import { ErrorEntity } from "../../../ErrorEntity";
+import { SuccessEntity } from "../../../SuccessEntity";
 export interface CartDeleteUseCase {
-  delete(ids: ProductId[]): Either<ErrorEntities, SuccessEntities>;
+  delete(ids: ProductId[]): Either<ErrorEntity, SuccessEntity>;
 }

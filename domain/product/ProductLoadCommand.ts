@@ -1,4 +1,4 @@
-import { ProductId } from "./ProductEnitity";
+import { ProductId } from "./ProductEntity";
 
 export class ProductLoadCommand {
   constructor(

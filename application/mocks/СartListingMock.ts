@@ -1,6 +1,6 @@
-import { ProductEnitity } from "../../domain/product/ProductEnitity";
-import { CardListingEntities } from "../../domain/cart/entities/CartListEnitity";
+import { ProductEntity } from "../../domain/product/ProductEntity";
+import { CardListingEntities } from "../../domain/cart/entities/CartListEntity";
 
 export const artListingMock: CardListingEntities = new CardListingEntities([
-  new ProductEnitity("4", "kinder test", 120),
+  new ProductEntity("4", "kinder test", 120),
 ]);

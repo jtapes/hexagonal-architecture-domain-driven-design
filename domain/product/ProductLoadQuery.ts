@@ -1,8 +1,8 @@
-import { ProductListEnitity } from "./ProductListEnitity";
+import { ProductListEntity } from "./ProductListEntity";
 import { ProductLoadCommand } from "./ProductLoadCommand";
 import { Either } from "@sweet-monads/either";
-import { ErrorEntities } from "../ErrorEntities";
+import { ErrorEntity } from "../ErrorEntity";
 
 export interface ProductLoadQuery {
-  load(command: ProductLoadCommand): Either<ErrorEntities, ProductListEnitity>;
+  load(command: ProductLoadCommand): Either<ErrorEntity, ProductListEntity>;
 }

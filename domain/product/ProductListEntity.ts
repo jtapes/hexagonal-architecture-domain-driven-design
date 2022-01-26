@@ -1,7 +1,7 @@
-import { ProductEnitity, ProductId } from "./ProductEnitity";
+import { ProductEntity, ProductId } from "./ProductEntity";
 
-export class ProductListEnitity {
-  constructor(protected readonly _products: ProductEnitity[] = []) {}
+export class ProductListEntity {
+  constructor(protected readonly _products: ProductEntity[] = []) {}
 
   /* istanbul ignore next */
   get products() {

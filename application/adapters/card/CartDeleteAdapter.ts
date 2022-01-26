@@ -1,9 +1,9 @@
-import { ProductId } from "../../../domain/product/ProductEnitity";
+import { ProductId } from "../../../domain/product/ProductEntity";
 import { CartDeletePort } from "../../../domain/cart/ports/pr/CartDeletePort";
 import { right, left } from "@sweet-monads/either";
 import { SuccessResponseSchema } from "../../schema/SuccessSchema";
-import { ErrorEntities } from "../../../domain/ErrorEntities";
-import { SuccessEntities } from "../../../domain/SuccessEntities";
+import { ErrorEntity } from "../../../domain/ErrorEntity";
+import { SuccessEntity } from "../../../domain/SuccessEntity";
 
 export class CartDeleteAdapter implements CartDeletePort {
   api(ids: ProductId[]) {
@@ -25,9 +25,9 @@ export class CartDeleteAdapter implements CartDeletePort {
     const response = this.api(ids);
     const valid = SuccessResponseSchema.safeParse(response.data);
     if (valid.success) {
-      return right(new SuccessEntities(true));
+      return right(new SuccessEntity(true));
     } else {
-      return left(new ErrorEntities("id valid"));
+      return left(new ErrorEntity("id valid"));
     }
   }
 }

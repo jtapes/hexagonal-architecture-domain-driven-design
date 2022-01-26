@@ -1,4 +1,4 @@
-export class ErrorEntities {
+export class ErrorEntity {
   constructor(
     private readonly _message: string,
     private readonly _stack?: any
