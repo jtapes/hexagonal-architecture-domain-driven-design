@@ -1,5 +1,5 @@
 import { ProductId } from "../../../domain/product/ProductEnitity";
-import { CartAddPort } from "../../../domain/cart/ports/out/CartAddPort";
+import { CartAddPort } from "../../../domain/cart/ports/pr/CartAddPort";
 import { right, left } from "@sweet-monads/either";
 import { ErrorEntities } from "../../../domain/ErrorEntities";
 import { AxiosType } from "../../../types/AxiosType";

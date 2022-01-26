@@ -1,5 +1,5 @@
 import { ProductId } from "../../../domain/product/ProductEnitity";
-import { CartDeletePort } from "../../../domain/cart/ports/out/CartDeletePort";
+import { CartDeletePort } from "../../../domain/cart/ports/pr/CartDeletePort";
 import { right, left } from "@sweet-monads/either";
 import { SuccessResponseSchema } from "../../schema/SuccessSchema";
 import { ErrorEntities } from "../../../domain/ErrorEntities";

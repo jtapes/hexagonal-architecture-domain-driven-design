@@ -1,4 +1,4 @@
-import { CartLoadQuery } from "../../../domain/cart/ports/in/CartLoadQuery";
+import { CartLoadQuery } from "../../../domain/cart/ports/sec/CartLoadQuery";
 import { CartLoadAdapter } from "../../adapters/card/CartLoadAdapter";
 
 export class CartLoadService implements CartLoadQuery {

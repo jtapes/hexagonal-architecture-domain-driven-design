@@ -1,5 +1,5 @@
 import { ProductId } from "../../../domain/product/ProductEnitity";
-import { CartDeleteUseCase } from "../../../domain/cart/ports/in/CartDeleteUseCase";
+import { CartDeleteUseCase } from "../../../domain/cart/ports/sec/CartDeleteUseCase";
 import { CartDeleteAdapter } from "../../adapters/card/CartDeleteAdapter";
 
 export class CartDeleteService implements CartDeleteUseCase {

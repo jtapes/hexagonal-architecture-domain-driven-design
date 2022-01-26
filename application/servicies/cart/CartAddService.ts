@@ -1,4 +1,4 @@
-import { CartAddUseCase } from "../../../domain/cart/ports/in/CartAddUseCase";
+import { CartAddUseCase } from "../../../domain/cart/ports/sec/CartAddUseCase";
 import { ProductId } from "../../../domain/product/ProductEnitity";
 import { CartAddAdapter } from "../../adapters/card/CartAddAdapter";
 

@@ -1,4 +1,4 @@
-import { CartLoadPort } from "../../../domain/cart/ports/out/CartLoadPort";
+import { CartLoadPort } from "../../../domain/cart/ports/pr/CartLoadPort";
 import { cardMapper } from "../../mappers/CardMapper";
 import { right, left } from "@sweet-monads/either";
 import { ProductsResponseSchema } from "../../schema/ProductsSchema";
