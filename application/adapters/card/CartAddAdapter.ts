@@ -1,9 +1,9 @@
-import { ProductId } from "../../domain/product/ProductEnitity";
-import { CartAddPort } from "../../domain/cart/ports/out/CartAddPort";
+import { ProductId } from "../../../domain/product/ProductEnitity";
+import { CartAddPort } from "../../../domain/cart/ports/out/CartAddPort";
 import { right, left } from "@sweet-monads/either";
-import { ErrorEntities } from "../../domain/ErrorEntities";
-import { AxiosType } from "../../types/AxiosType";
-import { SuccessEntities } from "../../domain/SuccessEntities";
+import { ErrorEntities } from "../../../domain/ErrorEntities";
+import { AxiosType } from "../../../types/AxiosType";
+import { SuccessEntities } from "../../../domain/SuccessEntities";
 import { SuccessResponseSchema } from "../../schema/SuccessSchema";
 
 export class CartAddAdapter implements CartAddPort {

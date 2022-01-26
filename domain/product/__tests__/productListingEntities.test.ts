@@ -1,4 +1,4 @@
-import { productListingMock } from "../../../mocks/ProductListingMock";
+import { productListingMock } from "../../../application/mocks/ProductListingMock";
 
 describe("Testing ProductListEnitity", () => {
   test("get namesCardsLog", () => {

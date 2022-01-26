@@ -1,9 +1,9 @@
 import "./api";
 import { ProductLoadCommand } from "./domain/product/ProductLoadCommand";
-import { ProductLoadService } from "./servicies/product/ProductLoadService";
-import { CartLoadService } from "./servicies/cart/CartLoadService";
-import { CartAddService } from "./servicies/cart/CartAddService";
-import { CartDeleteService } from "./servicies/cart/CartDeleteService";
+import { ProductLoadService } from "./application/servicies/product/ProductLoadService";
+import { CartLoadService } from "./application/servicies/cart/CartLoadService";
+import { CartAddService } from "./application/servicies/cart/CartAddService";
+import { CartDeleteService } from "./application/servicies/cart/CartDeleteService";
 import { CartListEnitity } from "./domain/cart/entities/CartListEnitity";
 
 const productLoadService = new ProductLoadService();

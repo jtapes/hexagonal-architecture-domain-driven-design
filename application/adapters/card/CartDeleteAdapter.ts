@@ -1,9 +1,9 @@
-import { ProductId } from "../../domain/product/ProductEnitity";
-import { CartDeletePort } from "../../domain/cart/ports/out/CartDeletePort";
+import { ProductId } from "../../../domain/product/ProductEnitity";
+import { CartDeletePort } from "../../../domain/cart/ports/out/CartDeletePort";
 import { right, left } from "@sweet-monads/either";
 import { SuccessResponseSchema } from "../../schema/SuccessSchema";
-import { ErrorEntities } from "../../domain/ErrorEntities";
-import { SuccessEntities } from "../../domain/SuccessEntities";
+import { ErrorEntities } from "../../../domain/ErrorEntities";
+import { SuccessEntities } from "../../../domain/SuccessEntities";
 
 export class CartDeleteAdapter implements CartDeletePort {
   api(ids: ProductId[]) {

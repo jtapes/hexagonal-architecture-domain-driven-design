@@ -1,8 +1,8 @@
-import { CartLoadPort } from "../../domain/cart/ports/out/CartLoadPort";
+import { CartLoadPort } from "../../../domain/cart/ports/out/CartLoadPort";
 import { cardMapper } from "../../mappers/CardMapper";
 import { right, left } from "@sweet-monads/either";
 import { ProductsResponseSchema } from "../../schema/ProductsSchema";
-import { ErrorEntities } from "../../domain/ErrorEntities";
+import { ErrorEntities } from "../../../domain/ErrorEntities";
 
 export class CartLoadAdapter implements CartLoadPort {
   load() {

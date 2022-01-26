@@ -1,5 +1,5 @@
-import { ProductListEnitity } from "../domain/product/ProductListEnitity";
-import { ProductEnitity } from "../domain/product/ProductEnitity";
+import { ProductListEnitity } from "../../domain/product/ProductListEnitity";
+import { ProductEnitity } from "../../domain/product/ProductEnitity";
 
 export const productListingMock: ProductListEnitity = new ProductListEnitity([
   new ProductEnitity("1", "snikers", 60),

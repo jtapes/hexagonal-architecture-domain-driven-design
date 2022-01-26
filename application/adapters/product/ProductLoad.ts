@@ -1,10 +1,10 @@
-import { ProductLoadPort } from "../../domain/product/ProductLoadPort";
-import { ProductLoadCommand } from "../../domain/product/ProductLoadCommand";
+import { ProductLoadPort } from "../../../domain/product/ProductLoadPort";
+import { ProductLoadCommand } from "../../../domain/product/ProductLoadCommand";
 import { productsMapper } from "../../mappers/ProductMapper";
 import { ProductsResponseSchema } from "../../schema/ProductsSchema";
 import { right, left } from "@sweet-monads/either";
-import { ErrorEntities } from "../../domain/ErrorEntities";
-import { AxiosType } from "../../types/AxiosType";
+import { ErrorEntities } from "../../../domain/ErrorEntities";
+import { AxiosType } from "../../../types/AxiosType";
 
 export class ProductLoadAdapter implements ProductLoadPort {
   api(command: ProductLoadCommand): AxiosType {

@@ -1,5 +1,5 @@
-import { CartListEnitity } from "../domain/cart/entities/CartListEnitity";
-import { CartEnitity } from "../domain/cart/entities/CartEnitity";
+import { CartListEnitity } from "../../domain/cart/entities/CartListEnitity";
+import { CartEnitity } from "../../domain/cart/entities/CartEnitity";
 import { ProductsResponseSchemaType } from "../schema/ProductsSchema";
 
 export function cardMapper(

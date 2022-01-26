@@ -1,5 +1,5 @@
-import { ProductEnitity } from "../domain/product/ProductEnitity";
-import { ProductListEnitity } from "../domain/product/ProductListEnitity";
+import { ProductEnitity } from "../../domain/product/ProductEnitity";
+import { ProductListEnitity } from "../../domain/product/ProductListEnitity";
 import { ProductsResponseSchemaType } from "../schema/ProductsSchema";
 
 export function productsMapper(
