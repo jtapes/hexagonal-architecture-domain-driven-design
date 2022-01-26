@@ -1,10 +1,8 @@
-import { productListingMock } from "../../../application/mocks/ProductListingMock";
+import { ProductListingMock } from "../../../application/mocks/ProductListingMock";
 
-describe("Testing ProductListEnitity", () => {
-  test("get namesCardsLog", () => {
-    console.log(productListingMock.namesCardsLog);
-    expect(
-      productListingMock.namesCardsLog === "snikers mars kinder"
-    ).toBeTruthy();
+describe("Testing ProductListEntity", () => {
+  test("get namesLog", () => {
+    console.log(ProductListingMock.namesLog);
+    expect(ProductListingMock.namesLog === "snickers mars kinder").toBeTruthy();
   });
 });

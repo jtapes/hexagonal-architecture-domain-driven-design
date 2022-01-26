@@ -27,7 +27,7 @@ cards = cardLoadService.load();
 console.log(cards.value);
 if (cards.value instanceof CartListEntity) {
   console.log(cards.value.totalProductsPrice);
-  console.log(cards.value.namesCardsLog);
+  console.log(cards.value.namesLog);
 }
 
 // delete products cards

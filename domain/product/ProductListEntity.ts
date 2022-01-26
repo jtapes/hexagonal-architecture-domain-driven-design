@@ -8,7 +8,7 @@ export class ProductListEntity {
     return this._products;
   }
 
-  get namesCardsLog() {
+  get namesLog() {
     return this._products.map((product) => product.name).join(" ");
   }
 }
