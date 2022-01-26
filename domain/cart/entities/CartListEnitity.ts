@@ -1,12 +1,12 @@
-import { ProductListingEnitity } from "../../product/ProductListingEnitity";
+import { ProductListEnitity } from "../../product/ProductListEnitity";
 import { ProductEnitity, ProductId } from "../../product/ProductEnitity";
-export class CartListingEnitity extends ProductListingEnitity {
-  addProduct(product: ProductEnitity): ProductListingEnitity {
+export class CartListEnitity extends ProductListEnitity {
+  addProduct(product: ProductEnitity): ProductListEnitity {
     this._products.push(product);
     return this;
   }
 
-  removeProduct(id: ProductId): ProductListingEnitity {
+  removeProduct(id: ProductId): ProductListEnitity {
     const index = this._products.findIndex((p: ProductEnitity) => p.id === id);
     this._products.splice(index, 1);
     return this;

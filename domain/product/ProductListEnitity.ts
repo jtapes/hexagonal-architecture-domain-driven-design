@@ -1,6 +1,6 @@
 import { ProductEnitity, ProductId } from "./ProductEnitity";
 
-export class ProductListingEnitity {
+export class ProductListEnitity {
   constructor(protected readonly _products: ProductEnitity[] = []) {}
 
   /* istanbul ignore next */
