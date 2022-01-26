@@ -7,8 +7,8 @@ export class ProductLoadService implements ProductLoadQuery {
   productLoadPort = new ProductLoadAdapter();
 
   localization() {
-    // @ts-ignore mock
-    global.navigator = {
+    // mock browser api
+    const navigator = {
       language: "en-EN",
     };
     const userLang = navigator.language;

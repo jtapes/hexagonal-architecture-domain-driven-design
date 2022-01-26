@@ -1,4 +1,4 @@
-import { ProductEntity, ProductId } from "./ProductEntity";
+import { ProductEntity } from "./ProductEntity";
 
 export class ProductListEntity {
   constructor(protected readonly _products: ProductEntity[] = []) {}
