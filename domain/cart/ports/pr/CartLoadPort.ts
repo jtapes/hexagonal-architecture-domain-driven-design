@@ -1,2 +1,2 @@
-import { CartLoadQuery } from "../in/CartLoadQuery";
+import { CartLoadQuery } from "../sec/CartLoadQuery";
 export interface CartLoadPort extends CartLoadQuery {}

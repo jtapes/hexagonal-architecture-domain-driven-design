@@ -1,6 +1,6 @@
 import { ProductEntity } from "../../domain/product/ProductEntity";
-import { CardListingEntities } from "../../domain/cart/entities/CartListEntity";
+import { CartListEntity } from "../../domain/cart/entities/CartListEntity";
 
-export const artListingMock: CardListingEntities = new CardListingEntities([
+export const artListingMock: CartListEntity = new CartListEntity([
   new ProductEntity("4", "kinder test", 120),
 ]);
