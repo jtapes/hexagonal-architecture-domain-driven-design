@@ -1,2 +1,2 @@
-import { CartDeleteUseCase } from "../in/CartDeleteUseCase";
+import { CartDeleteUseCase } from "../sec/CartDeleteUseCase";
 export interface CartDeletePort extends CartDeleteUseCase {}

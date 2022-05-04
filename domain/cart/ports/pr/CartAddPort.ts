@@ -1,2 +1,2 @@
-import { CartAddUseCase } from "../in/CartAddUseCase";
+import { CartAddUseCase } from "../sec/CartAddUseCase";
 export interface CartAddPort extends CartAddUseCase {}
